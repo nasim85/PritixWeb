@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="PritiXWeb.Main" %>
+<%@ Import Namespace="System.Web.Optimization" %>
+<!DOCTYPE html>
+<html lang="en">
+<head id="Head1" runat="server">
+    <title>Pritix Learning</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Pritix Learning">
+    <meta name="author" content="Pritix">
+    <%-- Style Section --%>
+    <%: Styles.Render("~/bundles/BootstrapCss")  %>
+    <asp:ContentPlaceHolder ID="StyleSection" runat="server" />
+</head>
+<body>
+    <%--<form id="form1" runat="server">--%>
+    <div class="container">
+        <!-- Static navbar -->
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand active" href="\" >PritiX</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li ><a href="\">Home</a></li>
+                        <li><a href="AboutUs.aspx">About</a></li>
+                        <li><a href="Dictionaries.aspx">Dictionaries</a></li>
+                        <li><a href="Contact.aspx">Contact</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li ><a href="Dictionaries.aspx">Welcome!<span id="displayName" runat="server">Guest</span></a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </div>
+        <!-- Content Page Section -->
+        <div class="container">
+            <asp:ContentPlaceHolder ID="ContentSection" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div></div>
+        <div class="container">
+            <div class="panel-footer"><span style="color:#808080">Copyrights @Pritix</span> </div>
+        </div>
+    </div>
+    
+    
+    <!-- /container -->
+    <%-- Script Section --%>
+    <%: Scripts.Render("~/bundles/jQuery")  %>
+    <asp:ContentPlaceHolder ID="ScriptSection" runat="server" />
+    <%--</form>--%>
+</body>
+</html>
